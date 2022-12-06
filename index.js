@@ -7,11 +7,11 @@ console.log("------------------------");
 
 function play(question, answer) {
   var userAnswer = readlineSync.question(question);
-  if (userAnswer === answer) {
-    console.log("right👌");
+  if (userAnswer.toUpperCase() === answer.toUpperCase()) {
+    console.log("right!");
     score++;
   } else {
-    console.log("wrong👎");
+    console.log("wrong!");
   }
 
   console.log("current score: ", score);
@@ -45,6 +45,8 @@ for (var i = 0; i < questions.length; i++) {
   play(questions[i].question, questions[i].answer);
 }
 
-console.log("Your Total Score is : ", score);
+score == 5
+  ? console.log("You are a true ARMY !")
+  : console.log("Your Total Score is : ", score);
 
-console.log("Thank you for playing");
+console.log("Thank you for playing !");
